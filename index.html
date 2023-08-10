@@ -89,7 +89,7 @@
                         playing = true;
                     }
                     const result = await fetch('/html/'+e.detail.info);
-                    const images = e.detail.images.map((url)=>'/images/'+url);
+                    const images = e.detail.images.map((url)=>'./images/'+url);
                     galleryEl.setImages(images);
                     inspectorEl.setContent(await result.text());
                 }
