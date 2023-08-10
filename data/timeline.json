@@ -1,0 +1,152 @@
+[
+    {
+        "start" : "02-01-2012 00:00:00",
+        "end" : "02-01-2013 00:00:00",
+        "content" : "OpenGov",
+        "info":"opengov.html",
+        "images": [
+            "opengov/interface.jpg",
+            "opengov/circle.jpg",
+            "opengov/group.jpg",
+            "opengov/interface.jpg",
+            "opengov/pondering.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "02-01-2011 00:00:00",
+        "end" : "01-31-2012 00:00:00",
+        "content" : "Style Page",
+        "info":"stylepage.html",
+        "images": [
+            "stylepage/feed_shot.png",
+            "stylepage/feed.png",
+            "stylepage/frontend-team.jpg",
+            "stylepage/group.jpg",
+            "stylepage/notifications.png"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "10-01-2013 00:00:00",
+        "end" : "08-01-2014 00:00:00",
+        "content" : "Skybox",
+        "info":"skybox.html",
+        "images": [
+            "skybox/splash.jpg",
+            "skybox/dnepr.jpg",
+            "skybox/launch-beards.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "04-01-2007 00:00:00",
+        "end" : "01-31-2011 00:00:00",
+        "content" : "Reputation Defender",
+        "info":"reputation.html",
+        "images": [
+            "reputation/noe.jpg",
+            "reputation/meeting.jpg",
+            "reputation/team.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "06-01-2005 00:00:00",
+        "end" : "04-31-2008 00:00:00",
+        "content" : "Card Soft",
+        "info":"cardsoft.html",
+        "images": [
+            "cardsoft/info.jpg",
+            "cardsoft/desk.jpg",
+            "cardsoft/gui-1.5-1.png",
+            "cardsoft/gui-2.0-1.png"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "10-01-2003 00:00:00",
+        "end" : "06-31-2005 00:00:00",
+        "content" : "Merchant Consulting Group",
+        "info":"mcg.html",
+        "images": [
+            "mcg/gui-1.0.jpg",
+            "mcg/halloween.jpg",
+            "mcg/my-desk.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "04-01-2000 00:00:00",
+        "end" : "10-31-2002 00:00:00",
+        "content" : "Skidaway Institute of Oceanography",
+        "info":"skio.html",
+        "images": [
+            "skio/boat.jpg",
+            "skio/skipper-1.jpg",
+            "skio/skipper-2.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "02-02-2007 00:00:00",
+        "end" : "08-01-2014 00:00:00",
+        "content" : "Contract",
+        "info":"contract.html",
+        "images": [
+            "contract/android-store-scraper.jpg",
+            "contract/api.png",
+            "contract/covered.jpg",
+            "contract/streetsweeper.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "01-01-2021 00:00:00",
+        "end" : "{{now}}",
+        "content" : "Outsider.Industries",
+        "info":"outsider.html",
+        "images": [],
+        "className" : "companies"
+    },
+    {
+        "start" : "09-16-2005 00:00:00",
+        "end" : "{{now}}",
+        "content" : "Open Source",
+        "info":"opensource.html",
+        "images": [],
+        "className" : "software"
+    },
+    {
+        "start" : "06-02-2016 00:00:00",
+        "end" : "10-01-2017 00:00:00",
+        "content" : "Landr",
+        "info":"landr.html",
+        "images": [],
+        "className" : "companies"
+    },
+    {
+        "start" : "08-01-2014 00:00:00",
+        "end" : "06-01-2016 00:00:00",
+        "content" : "Google",
+        "info":"google.html",
+        "images": [
+            "google/noogler.jpg",
+            "google/marshmallow.jpg"
+        ],
+        "className" : "companies"
+    },
+    {
+        "start" : "04-03-2018 00:00:00",
+        "end" : "04-03-2021 00:00:00",
+        "content" : "Cape Analytics",
+        "info":"cape.html",
+        "images": [
+            "cape/commercial-lines.jpg",
+            "cape/halloween.jpg",
+            "cape/logo.jpg",
+            "cape/teambuilding.jpg"
+            ],
+        "className" : "companies"
+    }
+]

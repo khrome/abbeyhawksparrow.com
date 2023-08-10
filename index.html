@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Abbey Hawk Sparrow : Software Developer</title>
+        <meta name="description" content="Software Engineer in the SF Bay Area"/>
+        <link rel="author" href="https://www.linkedin.com/in/khrome/"/>
+        
+        <!-- FB -->
+        <meta property="og:title" content="Abbey Hawk Sparrow : Software Developer">
+        <meta property="og:type" content="blog">
+        <meta property="og:image" content="http://www.abbeyhawksparrow.com/preview.jpg">
+        <meta property="og:url" content="http://www.abbeyhawksparrow.com">
+        <meta property="og:description" content="Software Engineer in the SF Bay Area">
+        <meta property="fb:admins" content="500247657">
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://abbeyhawksparrow.com">
+        <meta name="twitter:title" content="Abbey Hawk Sparrow : Software Developer">
+        <meta name="twitter:description" content="Software Engineer in the SF Bay Area">
+        <meta name="twitter:image" content="http://www.abbeyhawksparrow.com/preview.jpg">
+        
+        <!-- All code unminified for your reading pleasure -->
+        <link rel="stylesheet" type="text/css" href="font-awesome.css">
+        <link href="/index.css" rel="stylesheet">
+        <link id="timeline.css" rel="stylesheet" href="/timeline.css">
+        <link id="animate.css" href="/node_modules/animate.css/animate.css" rel="stylesheet">
+        <link id="image-gallery.css" href="/node_modules/@environment-safe/image-gallery/image-gallery.css" rel="stylesheet">
+        <script type="importmap"> { "imports": {
+            "zoomable-timeline": "/node_modules/zoomable-timeline//src/index.mjs",
+            "browser-or-node": "/node_modules/browser-or-node/src/index.js",
+            "@environment-safe/elements": "/node_modules/@environment-safe/elements/src/index.mjs",
+            "@environment-safe/image-gallery": "/node_modules/@environment-safe/image-gallery/src/index.mjs",
+            "esmodule-banner":"http://www.esmodules.site/esmodule-banner.mjs",
+            "three": "/node_modules/three/build/three.module.js"
+        } }</script>
+        <script src="/node_modules/@environment-safe/image-gallery/progressbar.js"></script>
+        <script src="/node_modules/zoomable-timeline/timeline.js"></script>
+    </head>
+    <body>
+        <script type="module">
+            import { ZoomableTimeline, TimelineCard } from 'zoomable-timeline';
+            import { GalleryImage, ImageGallery } from '@environment-safe/image-gallery';
+            import 'esmodule-banner';
+        </script>
+        <module-banner></module-banner>
+        <fork-banner url="https://github.com/khrome/abbeyhawksparrow.com"></fork-banner>
+        <image-gallery id="background">
+            <gallery-image source="/images/abbey/me-2012.jpg"></gallery-image>
+        </image-gallery>
+        <timeline-card id="inspector" class="timeline" transitions="flipInY, flipInX, bounceInLeft, bounceInDown, rubberBand, tada, lightSpeedInLeft, rotateInDownLeft, zoomInDown, slideInDown, slideInLeft, backInDown, backInLeft">
+            <div>
+                <p>Hi there! I'm a full stack software developer in the Boulder, CO Area who specializes in new product development, but I have worked in a variety of languages and architectures in planning, design, research, implementation and mentoring capacities. I love the collaborative environment of early startups and working with extremely talented teams to create new products as well as contributing to open source.</p>
+                <span class="signature">-ABBEY</span>
+                <div class="icons">
+                    &nbsp;
+                    <a href="https://github.com/khrome"><div class="icon icon-github"></div></a>
+                    <a href="http://www.linkedin.com/in/khrome"><div class="icon icon-linkedin-sign"></div></a>
+                    <a href="http://jsfiddle.net/user/khrome/fiddles/"><div class="icon icon-cloud"><span class="text-icon">∞</span></div></a>
+                </div>
+            </div>
+        </timeline-card>
+        <image-gallery id="gallery">
+            <gallery-image source="/images/abbey/me-2012.jpg"></gallery-image>
+        </image-gallery>
+        <zoomable-timeline 
+            id="timeline" 
+            class="timeline" 
+            card="inspector"
+        ></zoomable-timeline>
+        <script type="module">
+            const timelineEl = document.getElementById('timeline');
+            const inspectorEl = document.getElementById('inspector');
+            const galleryEl = document.getElementById('gallery');
+            let playing = false;
+            timeline.addEventListener('timeline-select', async (e)=>{
+                if(e.detail){
+                    if(!playing){
+                        galleryEl.play();
+                        playing = true;
+                    }
+                    const result = await fetch('/html/'+e.detail.info);
+                    const images = e.detail.images.map((url)=>'/images/'+url);
+                    galleryEl.setImages(images);
+                    inspectorEl.setContent(await result.text());
+                }
+            });
+            timelineEl.setAttribute('src', '/data/timeline.json');
+        </script>
+
+    </body>
+</html>

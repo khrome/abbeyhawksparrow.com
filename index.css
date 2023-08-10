@@ -1,0 +1,93 @@
+.timeline{
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    width: 100%;
+}
+body {
+    font-size: 10pt;
+    font-family: verdana, sans, arial, sans-serif;
+    margin:0px;
+    padding: 0px;
+}
+timeline-card, image-gallery#gallery{
+    background-color : rgba(0, 0, 0, 0.7);
+    box-shadow: 3px 3px 10px black;
+    border-radius : 10px;
+    font-size : 1.2em;
+    min-width : 250px;
+    position : absolute;
+    font-family: Helvetica;
+}
+#inspector{
+    position: absolute;
+    display: block;
+    top: 0px;
+    overflow: scroll;
+    width: 350px;
+    height: 300px;
+    margin: 40px;
+    padding: 20px;
+    color: white;
+}
+#inspector a, #inspector a:active, #inspector a:visited{
+    color : #CCCCCC;
+}
+#inspector p{
+    font-size : 0.8em;
+    font-weight:100;
+}
+.icons{
+    float :right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.icon{
+    font-size : 3em;
+}
+a{
+    text-decoration : none;
+}
+.text-icon{
+    margin-left:-0.8em;
+    margin-right:0.2em;
+    z-index:2;
+    color:black;
+    display:inline-block; 
+    font-size:1.1em;
+    font-family:'Monaco'
+}
+#background{
+    position: absolute;
+    display: block;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    
+}
+#background img{ margin: auto }
+#gallery{
+    position: absolute;
+    display: block;
+    top: 50px;
+    right: 50px;
+    width: 380px;
+    height: 330px;
+    background-color: white;
+    
+}
+#gallery img{ margin: auto }
+#footer{
+    position : absolute;
+    bottom :0px;
+    width : 100%;
+    background-color:rgba(0,0,0,0.7);
+    font-family : DrawingBoardBBRegular;
+    font-size: 1em;
+}
+#footer a, #footer a:active, #footer:visited, #footer span{
+    margin : 4px;
+    display: inline-block;
+    color : #CCCCCC;
+}

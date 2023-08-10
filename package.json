@@ -1,0 +1,17 @@
+{
+    "name": "abbeyhawksparrow.com",
+    "version": "0.0.1",
+    "homepage": "https://github.com/environment-safe/text-effects",
+    "description": "My Personal Site",
+    "keywords": [],
+    "author": "Abbey Hawk Sparrow <khrome>(http://abbeyhawksparrow.com)",
+    "dependencies": {
+        "@environment-safe/elements": "^0.0.2",
+        "@environment-safe/image-gallery": "^0.0.3",
+        "@environment-safe/text-effects": "^0.0.1",
+        "zoomable-timeline": "^0.0.2"
+    },
+    "scripts": {
+        "local-http": "open http://localhost:8000/index.html; npx http-server -p 8000"
+    }
+}
