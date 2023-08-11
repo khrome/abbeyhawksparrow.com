@@ -253,7 +253,7 @@ $(document).ready(function(){
         $('#gallery_info').css('max-width', imgSize.width);
     });
 
-    new Request.JSON({
+    new Request({
         url : 'career.json',
         onSuccess : function(text){
             var data = JSON.parse(text);
