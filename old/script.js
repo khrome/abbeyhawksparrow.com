@@ -114,6 +114,7 @@ function getCard(name, callback){
     }else{
         new Request({
             url : 'Cards/'+name+'.html',
+            method: 'get',
             onSuccess : function(data){
                 cards[name] = data;
                 callback(cards[name]);
