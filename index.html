@@ -28,7 +28,7 @@
         <link id="animate.css" href="https://unpkg.com/browse/animate.css@4.1.1/animate.css" rel="stylesheet">
         <link id="image-gallery.css" href="https://unpkg.com/browse/@environment-safe/image-gallery@0.0.3/image-gallery.css" rel="stylesheet">
         <script>
-            if('noModule' in HTMLScriptElement.prototype){
+            if(!('noModule' in HTMLScriptElement.prototype)){
                 window.location.replace("./old/");
             }
         </script>
