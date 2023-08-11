@@ -255,6 +255,7 @@ $(document).ready(function(){
 
     new Request({
         url : 'career.json',
+        method: 'get',
         onSuccess : function(text){
             var data = JSON.parse(text);
             var min;
