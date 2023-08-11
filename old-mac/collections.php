@@ -1,0 +1,124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="Generator" content="iWeb 1.1.2" />
+    <title>Photos</title>
+    <script type="text/javascript" src="./TableSort/Event.js"></script><script type="text/javascript" src="./TableSort/SortedTable.js"></script><script type="text/javascript">
+                    var sourceTable, destTable;
+                    function table_row_init() {
+                        sourceTable = new SortedTable('s');
+                        destTable = new SortedTable('d');
+                        mySorted = new SortedTable();
+                    }
+                    function moveRows(s,d) {
+                        var a = new Array();
+                        for (var o in s.selectedElements) {
+                            a.push(s.selectedElements[o]);
+                        }
+                        for (var o in a) {
+                            var elm = a[o];
+                            var tds = elm.getElementsByTagName('td');
+                            for (var i in tds) {
+                                if (tds[i].headers) tds[i].headers = d.table.id+''+tds[i].headers.substr(d.table.id.length);
+                            }
+                            d.body.appendChild(a[o]);
+                            d.deselect(a[o]);
+                            d.init(d.table);
+                            d.sort();
+                            s.deselect(a[o]);
+                            s.init(s.table);
+                        }
+                    }
+                </script><link rel="stylesheet" type="text/css" href="example.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="Photos_files/Photos.css" /><script type="text/javascript" src="SlideShow_assets/openSlideShowWindow.js"></script><script type="text/javascript" src="Photos_files/Photos.js"></script>
+  </head>
+  <body style="background: #000000; margin: 0pt; " onload="onPageLoad();table_row_init();">
+    <div style="text-align: center; ">
+      <div style="margin-left: auto; margin-right: auto; overflow: hidden; position: relative;  background: #000000; text-align: left; width: 700px; " id="body_content">
+        <div style="float: left; height: 0px; line-height: 0px; margin-left: 0px; position: relative; width: 700px; z-index: 10; " id="header_layer">
+          <div style="height: 0px; line-height: 0px; " class="tinyText"> </div>
+        </div>
+        <div style="height: 46px; margin-left: 0px; position: relative; width: 700px; z-index: 0; " id="nav_layer">
+        </div>
+        <div style="margin-left: 0px; position: relative; width: 700px; z-index: 5; " id="body_layer">
+          <div style="height: 0px; line-height: 0px; " class="tinyText"> </div>
+          <div style="height: 1px; line-height: 1px; " class="tinyText"> </div>
+          <div class="graphic_generic_body_textbox_style_default" style="margin-left: 35px; margin-top: 116px; position: relative; width: 630px; z-index: 1; ">
+            <div>
+              <div style="padding: 4px; " class="Normal">
+                <div class="paragraph Body" style="line-height: 20px; padding-bottom: 0pt; padding-top: 0pt; "><?php
+                
+                $body = "";
+                if (!$_REQUEST['target']) $target = "books";
+                else $target = $_REQUEST['target'];
+                $lines = file($target.".txt");
+                foreach ($lines as $line_num => $line) {
+                    $body .=  $line."\n";
+                }
+                echo($body);
+                ?></div>
+              </div>
+              <div style="height: 17px; line-height: 17px; " class="tinyText"> </div>
+            </div>
+          </div>
+          
+
+
+          <div class="graphic_generic_title_textbox_style_default" style="height: 49px; left: 35px; position: absolute; top: 22px; width: 630px; z-index: 1; " id="id1">
+            <div>
+              <div class="graphic_shape_layout_style_default">
+                <div class="paragraph Title" style="line-height: 42px; padding-bottom: 0pt; padding-top: 0pt; ">Abbey's <?php echo($target); ?></div>
+              </div>
+            </div>
+          </div>
+          
+
+<img src="Photos_files/shapeimage_1.jpg" alt="" style="height: 1px; left: 35px; position: absolute; top: 1px; width: 630px; z-index: 1; " />
+
+
+          <div style=" left: 35px; position: absolute; top: 212px; width: 630px; z-index: 1; ">
+          
+          </div>
+          <div style="height: 100%; line-height: 100%; " class="tinyText"> </div>
+          <?php
+
+/**
+ * example using the 'DeliciousWrangler' PHP class
+ * with the 'SortedTable' Javascripts
+ * @author Abbey Hawk Sparrow
+ * @version 1.0
+ * @modificationDate 08-11-2006
+ * @creationDate 01-26-2006
+ */
+
+    require("Delicious/DeliciousWrangler.php");
+    
+    $xml = "";
+    if($_REQUEST['target'] == 'movies'){
+        $library = new DeliciousWrangler("Delicious/movies.txt", "title, director, theatricalDate");
+        echo($library->makeTable($library->BuildSummary("medium", "movie")));
+    }else if($_REQUEST['target'] == 'games'){
+        $library = new DeliciousWrangler("Delicious/games.txt", "title, platform, developer, published, aspect");
+        echo($library->makeTable($library->BuildSummary("medium", "game")));
+    }else{
+        $library = new DeliciousWrangler("Delicious/books.txt", "title, author");
+        echo($library->makeTable($library->BuildSummary("medium", "book")));
+    }
+?>
+        </div>
+        <div style="height: 150px; margin-left: 0px; position: relative; width: 700px; z-index: 15; " id="footer_layer">
+          <div style="height: 0px; line-height: 0px; " class="tinyText"> </div>
+          <a href="http://www.mac.com" title="http://www.mac.com">
+<img src="Photos_files/image_1.png" alt="" id="id3" style="border: none; height: 50px; left: 280px; position: absolute; top: 87px; width: 139px; z-index: 1; " />
+</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

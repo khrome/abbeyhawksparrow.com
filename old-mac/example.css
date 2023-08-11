@@ -1,0 +1,20 @@
+/* Table ordering CSS for group listings*/
+
+.sorted {border:0;padding:0;margin:0 0 1em;border-left:1px solid #555;border-top:1px solid #555;border-bottom:1px solid #555;font-size:0.7em; width: 100%;}
+.sorted tr {border:0;padding:0;margin:0;}
+.sorted td, th {border:0;padding:2px 2px;margin:0;border-right:1px solid #555;background-color:#CCCCCC;}
+.sorted td[axis='number'], td[axis='date'] {text-align:right;}
+.sorted th {white-space:no-wrap;background-color:#888888;padding:2px 2px;}
+tfoot td {border-top:1px solid #333;}
+thead th {border-bottom:1px solid #333; color: 000000;}
+/*dl {margin:0 1em;padding:0;}
+dl, p, form {font-size:1.2em;float:left;}
+hr {clear:both;width:100%;height:0;border:0;border-bottom:1px dashed #333;margin:0 0 1em;padding:0;}*/
+/* sortedtable styles */
+.hover td {background-color:#AAAA00;}
+.sortedminus {background-color:#ecc;}
+.sortedplus {background-color:#cec;}
+.selrow td {background-color:#aae;}
+/* source-dest example styles */
+#s {float:left;}
+#d {float:left;clear:none;}

@@ -27,6 +27,11 @@
         <link id="timeline.css" rel="stylesheet" href="timeline.css">
         <link id="animate.css" href="https://unpkg.com/browse/animate.css@4.1.1/animate.css" rel="stylesheet">
         <link id="image-gallery.css" href="https://unpkg.com/browse/@environment-safe/image-gallery@0.0.3/image-gallery.css" rel="stylesheet">
+        <script>
+            if('noModule' in HTMLScriptElement.prototype){
+                window.location.replace("./old/");
+            }
+        </script>
         <script type="importmap"> { "imports": {
             "zoomable-timeline": "https://unpkg.com/zoomable-timeline@0.0.2/src/index.mjs",
             "browser-or-node": "https://unpkg.com/browser-or-node@2.1.1/src/index.js",

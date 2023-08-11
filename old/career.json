@@ -1,0 +1,80 @@
+[
+    {
+        "start" : "02-01-2012 00:00:00",
+        "end" : "02-01-2013 00:00:00",
+        "content" : "OpenGov",
+        "className" : "companies"
+    },
+    {
+        "start" : "02-01-2011 00:00:00",
+        "end" : "01-31-2012 00:00:00",
+        "content" : "Style Page",
+        "className" : "companies"
+    },
+    {
+        "start" : "10-01-2013 00:00:00",
+        "end" : "08-01-2014 00:00:00",
+        "content" : "Skybox",
+        "className" : "companies"
+    },
+    {
+        "start" : "04-01-2007 00:00:00",
+        "end" : "01-31-2011 00:00:00",
+        "content" : "Reputation Defender",
+        "className" : "companies"
+    },
+    {
+        "start" : "06-01-2005 00:00:00",
+        "end" : "04-31-2008 00:00:00",
+        "content" : "Card Soft",
+        "className" : "companies"
+    },
+    {
+        "start" : "10-01-2003 00:00:00",
+        "end" : "06-31-2005 00:00:00",
+        "content" : "Merchant Consulting Group",
+        "className" : "companies"
+    },
+    {
+        "start" : "04-01-2000 00:00:00",
+        "end" : "10-31-2002 00:00:00",
+        "content" : "Skidaway Institute of Oceanography",
+        "className" : "companies"
+    },
+    {
+        "start" : "02-02-2013 00:00:00",
+        "end" : "{{now}}",
+        "content" : "Contract",
+        "className" : "companies"
+    },
+    {
+        "start" : "09-16-2005 00:00:00",
+        "end" : "{{now}}",
+        "content" : "Open Source",
+        "className" : "software"
+    },
+    {
+        "start" : "06-02-2016 00:00:00",
+        "end" : "10-01-2017 00:00:00",
+        "content" : "Landr",
+        "className" : "companies"
+    },
+    {
+        "start" : "08-01-2014 00:00:00",
+        "end" : "06-01-2016 00:00:00",
+        "content" : "Google",
+        "className" : "companies"
+    },
+    {
+        "start" : "06-01-2016 00:00:00",
+        "end" : "{{now}}",
+        "content" : "Stealthmode Startup",
+        "className" : "companies"
+    },
+    {
+        "start" : "04-03-2018 00:00:00",
+        "end" : "{{now}}",
+        "content" : "Cape Analytics",
+        "className" : "companies"
+    }
+]
