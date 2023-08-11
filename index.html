@@ -24,9 +24,10 @@
         <!-- All code unminified for your reading pleasure -->
         <link rel="stylesheet" type="text/css" href="font-awesome.css">
         <link href="index.css" rel="stylesheet">
+        <link rel="stylesheet" href="fonts/drawingboard/stylesheet.css">
         <link id="timeline.css" rel="stylesheet" href="timeline.css">
-        <link id="animate.css" href="https://unpkg.com/browse/animate.css@4.1.1/animate.css" rel="stylesheet">
-        <link id="image-gallery.css" href="https://unpkg.com/browse/@environment-safe/image-gallery@0.0.3/image-gallery.css" rel="stylesheet">
+        <link id="animate.css" href="https://unpkg.com/animate.css@4.1.1/animate.css" rel="stylesheet">
+        <link id="image-gallery.css" href="https://unpkg.com/@environment-safe/image-gallery@0.0.3/image-gallery.css" rel="stylesheet">
         <script>
             if(!('noModule' in HTMLScriptElement.prototype)){
                 window.location.replace("./old/");
@@ -47,7 +48,7 @@
             "@environment-safe/image-gallery": "/node_modules/@environment-safe/image-gallery/src/index.mjs",
             "esmodule-banner":"http://www.esmodules.site/esmodule-banner.mjs",
             "three": "/node_modules/three/build/three.module.js"
-        } }</script>-->
+        } }</script> <!-- -->
         <script src="https://unpkg.com/@environment-safe/image-gallery/progressbar.js"></script>
         <script src="https://unpkg.com/zoomable-timeline@0.0.2/timeline.js"></script>
     </head>
@@ -89,10 +90,9 @@
             let playing = false;
             timeline.addEventListener('timeline-select', async (e)=>{
                 if(e.detail){
-                    if(!playing){
-                        galleryEl.play();
-                        playing = true;
-                    }
+                    galleryEl.pause();
+                    galleryEl._selected = 0;
+                    galleryEl.play();
                     const result = await fetch('./html/'+e.detail.info);
                     const images = e.detail.images.map((url)=>'./images/'+url);
                     galleryEl.setImages(images);
@@ -101,6 +101,13 @@
             });
             timelineEl.setAttribute('src', 'data/timeline.json');
         </script>
-
+        <footer>
+            <a href="https://www.npmjs.com/~khrome?tab=packages">Build</a> |
+            <a href="http://patternweaver.com/blog">Code</a> |
+            <a href="http://khrome.net/blog">Pontificate</a> |
+            <a href="https://keybase.io/khrome#_">Chat</a> |
+            <a href="https://www.last.fm/user/khromatik/library/artists">Listen</a>
+            <span id="copy"style="float:right"></span>
+        </footer>
     </body>
 </html>

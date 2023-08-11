@@ -5,8 +5,9 @@
         "content" : "OpenGov",
         "info":"opengov.html",
         "images": [
-            "opengov/interface.jpg",
+            "opengov/interface.png",
             "opengov/circle.jpg",
+            "opengov/kpi.png",
             "opengov/group.jpg",
             "opengov/interface.jpg",
             "opengov/pondering.jpg"
@@ -19,9 +20,9 @@
         "content" : "Style Page",
         "info":"stylepage.html",
         "images": [
-            "stylepage/feed_shot.png",
             "stylepage/feed.png",
             "stylepage/frontend-team.jpg",
+            "stylepage/my-feed.png",
             "stylepage/group.jpg",
             "stylepage/notifications.png"
         ],
@@ -47,6 +48,7 @@
         "images": [
             "reputation/noe.jpg",
             "reputation/meeting.jpg",
+            "reputation/sample-report.gif",
             "reputation/team.jpg"
         ],
         "className" : "companies"
@@ -57,7 +59,7 @@
         "content" : "Card Soft",
         "info":"cardsoft.html",
         "images": [
-            "cardsoft/info.jpg",
+            "cardsoft/info.png",
             "cardsoft/desk.jpg",
             "cardsoft/gui-1.5-1.png",
             "cardsoft/gui-2.0-1.png"
@@ -84,6 +86,7 @@
         "images": [
             "skio/boat.jpg",
             "skio/skipper-1.jpg",
+            "skio/SkIO.jpg",
             "skio/skipper-2.jpg"
         ],
         "className" : "companies"
@@ -96,6 +99,9 @@
         "images": [
             "contract/android-store-scraper.jpg",
             "contract/api.png",
+            "contract/buss-shots.jpg",
+            "contract/sites.png",
+            "contract/WWIII.jpg",
             "contract/covered.jpg",
             "contract/streetsweeper.jpg"
         ],
@@ -106,7 +112,13 @@
         "end" : "{{now}}",
         "content" : "Outsider.Industries",
         "info":"outsider.html",
-        "images": [],
+        "images": [
+            "outsider-industries/image-booth.png",
+            "outsider-industries/pixellerator.jpg",
+            "outsider-industries/pixellerator-desktop.png",
+            "outsider-industries/huewn-screens.png",
+            "outsider-industries/multi-vox.png"
+        ],
         "className" : "companies"
     },
     {
@@ -122,7 +134,14 @@
         "end" : "10-01-2017 00:00:00",
         "content" : "Landr",
         "info":"landr.html",
-        "images": [],
+        "images": [
+            "landr/3.png",
+            "landr/4.png",
+            "landr/5.png",
+            "landr/6.png",
+            "landr/7.png",
+            "landr/demo.png"
+        ],
         "className" : "companies"
     },
     {
@@ -142,9 +161,8 @@
         "content" : "Cape Analytics",
         "info":"cape.html",
         "images": [
-            "cape/commercial-lines.jpg",
+            "cape/commercial-lines.png",
             "cape/halloween.jpg",
-            "cape/logo.jpg",
             "cape/teambuilding.jpg"
             ],
         "className" : "companies"
