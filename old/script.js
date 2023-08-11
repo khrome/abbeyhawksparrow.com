@@ -255,7 +255,8 @@ $(document).ready(function(){
 
     new Request.JSON({
         url : 'career.json',
-        onSuccess : function(data){
+        onSuccess : function(text){
+            var data = JSON.parse(text);
             var min;
             var max;
             data.forEach(function(item, index){
