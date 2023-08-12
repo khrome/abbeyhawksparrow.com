@@ -34,13 +34,14 @@
             }
         </script>
         <script type="importmap"> { "imports": {
-            "zoomable-timeline": "https://unpkg.com/zoomable-timeline@0.0.2/src/index.mjs",
+            "zoomable-timeline": "https://unpkg.com/zoomable-timeline@0.0.3/src/index.mjs",
             "browser-or-node": "https://unpkg.com/browser-or-node@2.1.1/src/index.js",
             "@environment-safe/elements": "https://unpkg.com/@environment-safe/elements@0.0.2/src/index.mjs",
             "@environment-safe/image-gallery": "https://unpkg.com/@environment-safe/image-gallery@0.0.3/src/index.mjs",
             "esmodule-banner":"./module-banner.mjs",
-            "three": "https://unpkg.com/three@0.155.0/build/three.module.js"
-        } }</script>
+            "three": "https://unpkg.com/three@0.155.0/build/three.module.js",
+            "@environment-safe/text-effects":"https://unpkg.com/@environment-safe/text-effects@0.0.1/src/index.mjs"
+        } }</script> <!-- -->
         <!--<script type="importmap"> { "imports": {
             "zoomable-timeline": "/node_modules/zoomable-timeline//src/index.mjs",
             "browser-or-node": "/node_modules/browser-or-node/src/index.js",
@@ -61,8 +62,9 @@
         <module-banner></module-banner>
         <fork-banner url="https://github.com/khrome/abbeyhawksparrow.com"></fork-banner>
         <image-gallery id="background">
-            <gallery-image source="./images/abbey/me-2012.jpg"></gallery-image>
+            <gallery-image source="./images/abbey/me.png"></gallery-image>
         </image-gallery>
+        <div id="title"></div>
         <timeline-card id="inspector" class="timeline" transitions="flipInY, flipInX, bounceInLeft, bounceInDown, rubberBand, tada, lightSpeedInLeft, rotateInDownLeft, zoomInDown, slideInDown, slideInLeft, backInDown, backInLeft">
             <div>
                 <p>Hi there! I'm a full stack software developer in the Boulder, CO Area who specializes in new product development, but I have worked in a variety of languages and architectures in planning, design, research, implementation and mentoring capacities. I love the collaborative environment of early startups and working with extremely talented teams to create new products as well as contributing to open source.</p>
@@ -76,7 +78,7 @@
             </div>
         </timeline-card>
         <image-gallery id="gallery">
-            <gallery-image source="./images/abbey/me-2012.jpg"></gallery-image>
+            <gallery-image source="./images/abbey/me-2015.png"></gallery-image>
         </image-gallery>
         <zoomable-timeline 
             id="timeline" 
@@ -84,12 +86,26 @@
             card="inspector"
         ></zoomable-timeline>
         <script type="module">
+            import { TextAnimation } from '@environment-safe/text-effects';
             const timelineEl = document.getElementById('timeline');
             const inspectorEl = document.getElementById('inspector');
             const galleryEl = document.getElementById('gallery');
+            const titleEl = document.getElementById('title');
             let playing = false;
             timeline.addEventListener('timeline-select', async (e)=>{
+                console.log(inspectorEl.offsetWidth, window.innerWidth)
+                if(inspectorEl.offsetWidth == window.innerWidth){
+                    inspectorEl.setAttribute('transitions', 'tada');
+                }
+                console.log(e.detail);
                 if(e.detail){
+                    titleEl.innerHTML = e.detail.abbrevation || e.detail.content;
+                    new TextAnimation(
+                        '#title', 
+                        { fromHidden: true }
+                    ).animate({ 
+                        effect: 'flipInY' 
+                    });
                     galleryEl.pause();
                     galleryEl._selected = 0;
                     galleryEl.play();

@@ -17,13 +17,13 @@
     {
         "start" : "02-01-2011 00:00:00",
         "end" : "01-31-2012 00:00:00",
-        "content" : "Style Page",
+        "content" : "Stylepage",
         "info":"stylepage.html",
         "images": [
             "stylepage/feed.png",
             "stylepage/frontend-team.jpg",
             "stylepage/my-feed.png",
-            "stylepage/group.jpg",
+            "stylepage/my-desk.jpg",
             "stylepage/notifications.png"
         ],
         "className" : "companies"
@@ -70,6 +70,7 @@
         "start" : "10-01-2003 00:00:00",
         "end" : "06-31-2005 00:00:00",
         "content" : "Merchant Consulting Group",
+        "abbrevation":"MCG",
         "info":"mcg.html",
         "images": [
             "mcg/gui-1.0.jpg",
@@ -82,6 +83,7 @@
         "start" : "04-01-2000 00:00:00",
         "end" : "10-31-2002 00:00:00",
         "content" : "Skidaway Institute of Oceanography",
+        "abbrevation":"SkIO",
         "info":"skio.html",
         "images": [
             "skio/boat.jpg",
@@ -126,7 +128,14 @@
         "end" : "{{now}}",
         "content" : "Open Source",
         "info":"opensource.html",
-        "images": [],
+        "images": [
+            "opensource/blur.png",
+            "opensource/image-booth.png",
+            "opensource/max-loop.gif",
+            "opensource/demo.png",
+            "opensource/splash.jpg",
+            "opensource/test.png"
+        ],
         "className" : "software"
     },
     {

@@ -4,6 +4,59 @@
     border-color : #BBBB33 !important;
 }
 
+div p {
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+@media(max-width: 600px){
+    zoomable-timeline .timeline{
+        pointer-events: none !important;
+    }
+    zoomable-timeline.timeline div{
+        pointer-events: none !important;
+    }
+}
+
+@media(max-width: 600px){
+    div p img{
+        display: none;
+    }
+    div p{
+        margin: 40px;
+    }
+}
+@media(min-width: 600px) and (max-width:1000px){
+    div p img{
+        max-width:80px;
+        margin-right:10px;
+        margin-bottom:10px;
+        float:left;
+        background-color:#EEEEEE
+    }
+    div p{
+        margin: 10px;
+    }
+}
+
+@media(min-width: 1000px){
+    div p img{
+        max-width:150px;
+        margin-right:10px;
+        margin-bottom:10px;
+        float:left;
+        background-color:#EEEEEE
+    }
+    div p{
+        margin: 20px;
+    }
+}
+
+a{
+    color : #8888CC;
+    text-decoration : none;
+}
+
 div.timeline-frame {
     border: 1px solid #BEBEBE;
     overflow: hidden;

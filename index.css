@@ -1,3 +1,146 @@
+/* The responsive stuff */
+#title{
+    position: absolute;
+    display: block;
+    font-weight:800;
+    z-index: 100;
+    color:white;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000;
+}
+@media(max-width: 600px){
+    #inspector{
+        min-height: 300px;
+        height: 70vh;
+        margin-top: 100vh;
+        width: 100vw;
+        position: absolute;
+        display: block;
+        top: 0px;
+        overflow: scroll;
+        color: black;
+        background-color: white;
+    }
+    #title{
+        margin-top: calc(100vh - 20px);
+        left: 50px;
+        font-size: 2em;
+    }
+    #inspector::before{
+        content: " ";
+        width: 270px;
+        height: 250px;
+        float: right;
+    }
+    #inspector p{
+        margin: 40px;
+    }
+    #inspector p img{
+        visibility: hidden;
+    }
+    footer{
+        display: block;
+        position: fixed !important;
+        bottom: 0px;
+    }
+    #gallery{
+        float: right;
+        position: absolute;
+        display: block;
+        width: 250px;
+        height: 200px;
+        right: 0px;
+        margin: 10px;
+        top: calc(100vh + 40px);
+        padding: 0px;
+    }
+    #gallery div{
+        position: absolute;
+        display: block;
+    }
+    
+}
+@media (max-width: 1000px) and (min-width: 600px) {
+    #inspector{
+        width: 230px;
+        height: 230px;
+        position: absolute;
+        display: block;
+        top: 40px;
+        left: 40px;
+        overflow: scroll;
+        color: white;
+    }
+    #title{
+        top: 20px;
+        left: 50px;
+        font-size: 2em;
+    }
+    #inspector p{
+        margin: 10px;
+    }
+    #inspector p img{
+        width:100px;
+        margin-right:10px;
+        margin-bottom:10px;
+        float:left;
+        display:block;
+        background-color:#EEEEEE
+    }
+    #gallery{
+        position: absolute;
+        display: block;
+        width: 230px;
+        height: 230px;
+        top: 0px;
+        right: 0px;
+        margin: 40px;
+        padding: 0px;
+    }
+}
+@media (min-width: 1000px) {
+    #inspector{
+        top: 0px;
+        overflow: scroll;
+        color: white;
+        width: 360px;
+        height: 310px;
+        top: 40px;
+        left: 40px;
+        position: absolute;
+        display: block;
+    }
+    #title{
+        top: 15px;
+        left: 50px;
+        font-size: 3em;
+    }
+    #inspector p{
+        margin: 20px;
+    }
+    #inspector p img{
+        max-width:150px;
+        margin-right:10px;
+        margin-bottom:10px;
+        float:left;
+        display:block;
+        background-color:#EEEEEE
+    }
+    #gallery{
+        position: absolute;
+        display: block;
+        width: 350px;
+        height: 320px;
+        top: 0px;
+        right: 0px;
+        margin: 40px;
+        padding: 0px;
+    }
+}
+
 .timeline{
     position: absolute;
     display: block;
@@ -11,25 +154,20 @@ body {
     padding: 0px;
     font-family : DrawingBoardBBRegular;
 }
+a:any-link{
+    color : #CCCCCC;
+    text-decoration : none;
+}
 timeline-card, image-gallery#gallery{
     background-color : rgba(0, 0, 0, 0.7);
     box-shadow: 3px 3px 10px black;
     border-radius : 10px;
     font-size : 1.2em;
     min-width : 250px;
-    position : absolute;
     font-family: Helvetica;
 }
-#inspector{
-    position: absolute;
-    display: block;
-    top: 0px;
-    overflow: scroll;
-    width: 350px;
-    height: 300px;
-    margin: 40px;
-    padding: 20px;
-    color: white;
+#inspector .signature{
+    margin-left: 100px;
 }
 #inspector a, #inspector a:active, #inspector a:visited{
     color : #CCCCCC;
@@ -71,12 +209,6 @@ a{
 }
 #background img{ margin: auto }
 #gallery{
-    position: absolute;
-    display: block;
-    top: 50px;
-    right: 50px;
-    width: 380px;
-    height: 330px;
     background-color: white;
     
 }

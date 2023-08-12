@@ -9,7 +9,7 @@
         "@environment-safe/elements": "^0.0.2",
         "@environment-safe/image-gallery": "^0.0.3",
         "@environment-safe/text-effects": "^0.0.1",
-        "zoomable-timeline": "^0.0.2"
+        "zoomable-timeline": "^0.0.3"
     },
     "scripts": {
         "local-http": "open http://localhost:8000/index.html; npx http-server -p 8000"
