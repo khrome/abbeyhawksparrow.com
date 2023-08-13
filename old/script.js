@@ -227,7 +227,7 @@ $(document).ready(function(){
 
     splash = $('.splash')[0];
 
-    splash.fullFrameBackground('./abbey_backyard_small.jpg');
+    splash.fullFrameBackground('../images/abbey/me-2012.jpg');
     resizeFonts();
     var win = $(window);
     $('#gallery_info').css({
@@ -255,7 +255,7 @@ $(document).ready(function(){
     });
 
     new Request({
-        url : 'career.json',
+        url : '../data/timeline.json',
         method: 'get',
         onSuccess : function(text){
             var data = JSON.parse(text);
@@ -263,12 +263,15 @@ $(document).ready(function(){
             var max;
             data.forEach(function(item, index){
                 Object.keys(item).forEach(function(key){
-                    var matches = item[key].match(/^(\d{2})-(\d{2})-(\d{4}) (\d{2}):(\d{2}):(\d{2})$/);
-                    if(matches) data[index][key] = new Date(matches[3], matches[1], matches[2], matches[4], matches[5], matches[6]);
-                    if(item[key] == '{{now}}') data[index][key] = new Date();
-                    if(data[index][key] < min || !min) min = data[index][key];
-                    if(data[index][key] > max || !max) max = data[index][key];
-                });
+                    if(item[key] && item[key].match){
+                        var matches = item[key].match(/^(\d{2})-(\d{2})-(\d{4}) (\d{2}):(\d{2}):(\d{2})$/);
+                        if(matches) data[index][key] = new Date(matches[3], matches[1], matches[2], matches[4], matches[5], matches[6]);
+                        if(item[key] == '{{now}}') data[index][key] = new Date();
+                        if(data[index][key] < min || !min) min = data[index][key];
+                        if(data[index][key] > max || !max) max = data[index][key];
+                    }
+                    });
+                delete item.images;
             });
             window.career = data;
             timeline.draw(data, {

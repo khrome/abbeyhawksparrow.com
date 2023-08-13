@@ -28,13 +28,8 @@
         <link id="timeline.css" rel="stylesheet" href="timeline.css">
         <link id="animate.css" href="https://unpkg.com/animate.css@4.1.1/animate.css" rel="stylesheet">
         <link id="image-gallery.css" href="https://unpkg.com/@environment-safe/image-gallery@0.0.3/image-gallery.css" rel="stylesheet">
-        <script>
-            if(!('noModule' in HTMLScriptElement.prototype)){
-                window.location.replace("./old/");
-            }
-        </script>
         <script type="importmap"> { "imports": {
-            "zoomable-timeline": "https://unpkg.com/zoomable-timeline@0.0.3/src/index.mjs",
+            "zoomable-timeline": "https://unpkg.com/zoomable-timeline@0.0.4/src/index.mjs",
             "browser-or-node": "https://unpkg.com/browser-or-node@2.1.1/src/index.js",
             "@environment-safe/elements": "https://unpkg.com/@environment-safe/elements@0.0.2/src/index.mjs",
             "@environment-safe/image-gallery": "https://unpkg.com/@environment-safe/image-gallery@0.0.3/src/index.mjs",
@@ -48,10 +43,16 @@
             "@environment-safe/elements": "/node_modules/@environment-safe/elements/src/index.mjs",
             "@environment-safe/image-gallery": "/node_modules/@environment-safe/image-gallery/src/index.mjs",
             "esmodule-banner":"http://www.esmodules.site/esmodule-banner.mjs",
-            "three": "/node_modules/three/build/three.module.js"
+            "three": "/node_modules/three/build/three.module.js",
+            "@environment-safe/text-effects":"/node_modules/@environment-safe/text-effects/src/index.mjs"
         } }</script> <!-- -->
+        <script>
+            if(!('noModule' in HTMLScriptElement.prototype)){
+                window.location.replace("./old/");
+            }
+        </script>
         <script src="https://unpkg.com/@environment-safe/image-gallery/progressbar.js"></script>
-        <script src="https://unpkg.com/zoomable-timeline@0.0.2/timeline.js"></script>
+        <script src="https://unpkg.com/zoomable-timeline@0.0.4/timeline.js"></script>
     </head>
     <body>
         <script type="module">

@@ -2,6 +2,7 @@ body {
     font-size: 10pt;
     font-family: verdana, sans, arial, sans-serif;
     margin:0px;
+    height: 100vh;
 }
 .timeline-event.software{
     box-shadow: 3px 3px 10px black;
