@@ -33,7 +33,7 @@
             "browser-or-node": "https://unpkg.com/browser-or-node@2.1.1/src/index.js",
             "@environment-safe/elements": "https://unpkg.com/@environment-safe/elements@0.0.2/src/index.mjs",
             "@environment-safe/image-gallery": "https://unpkg.com/@environment-safe/image-gallery@0.0.3/src/index.mjs",
-            "esmodule-banner":"./module-banner.mjs",
+            "esmodule-banner":"https://www.esmodules.site/esmodule-banner.mjs",
             "three": "https://unpkg.com/three@0.155.0/build/three.module.js",
             "@environment-safe/text-effects":"https://unpkg.com/@environment-safe/text-effects@0.0.1/src/index.mjs"
         } }</script> <!-- -->
@@ -60,7 +60,18 @@
             import { GalleryImage, ImageGallery } from '@environment-safe/image-gallery';
             import 'esmodule-banner';
         </script>
-        <module-banner></module-banner>
+        <!--<module-banner></module-banner>-->
+        <module-banner 
+            firefox="supported" 
+            chrome="supported" 
+            safari="supported" 
+            edge="untested" 
+            nodejs="unsupported" 
+            support="redirect" 
+            mechanism="import" 
+            toolchain="n" 
+            format="global"
+         ></module-banner>
         <fork-banner url="https://github.com/khrome/abbeyhawksparrow.com"></fork-banner>
         <image-gallery id="background">
             <gallery-image source="./images/abbey/me.png"></gallery-image>
