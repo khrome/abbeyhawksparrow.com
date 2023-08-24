@@ -129,12 +129,14 @@
         "content" : "Open Source",
         "info":"opensource.html",
         "images": [
-            "opensource/blur.png",
+            "opensource/nyan.gif",
             "opensource/image-booth.png",
             "opensource/max-loop.gif",
             "opensource/demo.png",
-            "opensource/splash.jpg",
-            "opensource/test.png"
+            "opensource/job-poster.jpg",
+            "opensource/scss-textures.png",
+            "opensource/peewee-posterized.png",
+            "opensource/splatterplot.png"
         ],
         "className" : "software"
     },
