@@ -148,6 +148,7 @@
     width: 100%;
 }
 body {
+    overflow-x: hidden;
     font-size: 10pt;
     font-family: verdana, sans, arial, sans-serif;
     margin:0px;
